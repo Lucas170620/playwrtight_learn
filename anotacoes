@@ -1,0 +1,3 @@
+Commands:
+    npx playwright test --config=playwright.config.js --project=Chrome --headed --repeat-each=10
+    

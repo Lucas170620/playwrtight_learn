@@ -1,0 +1,142 @@
+Failure Test :
+    Nome: Test timeout of 30s exceeded
+    Tipo de failure: desempenho
+    Descrição: Os testes rodados no navegador Firefox teve problemas de desempenho
+    relatório:
+    1) [Firefox] › tests\calculator.spec.js:17:3 › main › click ======================================
+
+    Test timeout of 30000ms exceeded.
+
+    locator.click: Target closed
+    =========================== logs ===========================
+    waiting for selector "#quatre"
+      selector resolved to visible <input value="4" id="quatre" type="button" onmousedown=…/>
+    attempting click action
+      waiting for element to be visible, enabled and stable
+        forcing action
+      element is visible, enabled and stable
+      scrolling into view if needed
+    ============================================================
+
+      30 |       n = generateRandomIntegerInRange(0, 9);
+      31 |       numero01 = numero01 + String(n);
+    > 32 |       await page.locator(buttonNumber[n]).click({force:true});
+         |                                           ^
+      33 |     }
+      34 |     let n1 = parseInt(numero01);
+      35 |     n = generateRandomIntegerInRange(0, 3);
+
+        at C:\Users\017543631\Desktop\playW\tests\calculator.spec.js:32:43
+
+    Pending operations:
+      - locator.click at tests\calculator.spec.js:32:43
+
+
+    attachment #1: video (video/webm) --------------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox\video.webm
+    ------------------------------------------------------------------------------------------------
+
+    attachment #2: screenshot (image/png) ----------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox\test-failed-1.png
+    ------------------------------------------------------------------------------------------------
+
+  2) [Firefox] › tests\calculator.spec.js:17:3 › main › click ======================================
+
+    Test timeout of 30000ms exceeded.
+
+    locator.click: Target closed
+    =========================== logs ===========================
+    waiting for selector "#deux"
+      selector resolved to visible <input value="2" id="deux" type="button" onmousedown="t…/>
+    attempting click action
+      waiting for element to be visible, enabled and stable
+    ============================================================
+
+      40 |       n = generateRandomIntegerInRange(0, 9);
+      41 |       numero02 = numero02 + String(n);
+    > 42 |       await page.locator(buttonNumber[n]).click({ force: true });
+         |                                           ^
+      43 |     }
+      44 |     let n2 = parseInt(numero02);
+      45 |     switch (op) {
+
+        at C:\Users\017543631\Desktop\playW\tests\calculator.spec.js:42:43
+
+    Pending operations:
+      - locator.click at tests\calculator.spec.js:42:43
+
+
+    attachment #1: video (video/webm) --------------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat1\video.webm
+    ------------------------------------------------------------------------------------------------
+
+    attachment #2: screenshot (image/png) ----------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat1\test-failed-1.png
+    ------------------------------------------------------------------------------------------------
+
+  3) [Firefox] › tests\calculator.spec.js:17:3 › main › click ======================================
+
+    Test timeout of 30000ms exceeded.
+
+    locator.click: Target closed
+    =========================== logs ===========================
+    waiting for selector "#egale"
+      selector resolved to visible <input value="=" id="egale" type="button" onmousedown="…/>
+    attempting click action
+      waiting for element to be visible, enabled and stable
+      element is visible, enabled and stable
+      scrolling into view if needed
+    ============================================================
+
+      61 |     var result = resultado.toFixed(4);
+      62 |     resultado = parseFloat(result);
+    > 63 |     await page.locator("#egale").click();
+         |                                  ^
+      64 |
+      65 |     await expect(page.locator("#total")).toHaveText(String(resultado));
+      66 |
+
+        at C:\Users\017543631\Desktop\playW\tests\calculator.spec.js:63:34
+
+    Pending operations:
+      - locator.click at tests\calculator.spec.js:63:34
+
+
+    attachment #1: video (video/webm) --------------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat2\video.webm
+    ------------------------------------------------------------------------------------------------
+
+    attachment #2: screenshot (image/png) ----------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat2\test-failed-1.png
+    ------------------------------------------------------------------------------------------------
+
+  4) [Firefox] › tests\calculator.spec.js:17:3 › main › click ======================================
+
+    Test timeout of 30000ms exceeded.
+
+    page.goto: Navigation failed because page was closed!
+    =========================== logs ===========================
+    navigating to "https://www.calculadora-online.xyz/", waiting until "load"
+    ============================================================
+
+      24 |     let n;
+      25 |
+    > 26 |     await page.goto("/");
+         |                ^
+      27 |     await page.locator("#C").click({ force: true });
+      28 |     n = generateRandomIntegerInRange(1, 3);
+      29 |     for (let j = 0; j < n; j++) {
+
+        at C:\Users\017543631\Desktop\playW\tests\calculator.spec.js:26:16
+
+    Pending operations:
+      - page.goto at tests\calculator.spec.js:26:16
+
+
+    attachment #1: video (video/webm) --------------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat3\video.webm
+    ------------------------------------------------------------------------------------------------
+
+    attachment #2: screenshot (image/png) ----------------------------------------------------------
+    test-results\tests-calculator-main-click-Firefox-repeat3\test-failed-1.png
+    ------------------------------------------------------------------------------------------------ 
